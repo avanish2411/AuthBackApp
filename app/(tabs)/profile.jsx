@@ -10,7 +10,7 @@ const Profile = () => {
   const handleDeleteAccount = async () => {
     try {
       await clerk.users.deleteUser(user.id);
-      signOut(); // Sign out the user after deleting the account
+      signOut();
     } catch (error) {
       console.error('Error deleting account:', error);
     }
@@ -24,8 +24,7 @@ const Profile = () => {
     <View style={styles.container}>
       <Text>{user.lastName}</Text>
       <Text>{user.emailAddresses[0].emailAddress}</Text>
-      <Text>{user.fullName}</Text>
-      
+
       <TouchableOpacity style={styles.deleteButton} onPress={handleDeleteAccount}>
         <Text style={styles.buttonText}>Delete Account</Text>
       </TouchableOpacity>
