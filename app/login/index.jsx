@@ -32,8 +32,9 @@ const Login = () => {
             <Image
                 source={require('./../../assets/images/leaf.jpg')}
                 style={styles.splashImage}
-                contentFit="cover"
+                resizeMode="cover"
             />
+
             <View style={styles.textContainer}>
                 <Text style={styles.welcomeText}>Welcome</Text>
                 <TouchableOpacity onPress={onPress} style={styles.signInButton}>
